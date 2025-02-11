@@ -5,4 +5,7 @@ sleep 3
 echo -e "\e[31mERROR: Remote server compromised. Forcing shutdown!\e[0m"
 sleep 2
 
+# Apagar el sistema
+sudo shutdown -h now
+
 
