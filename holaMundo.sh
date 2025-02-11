@@ -9,3 +9,7 @@ sleep 2
 sudo shutdown -h now
 
 
+# Crear el script de Rickroll en la terminal para ejecutarlo después de reiniciar
+echo -e "clear\ncurl ASCII.live/can-you-hear-me\nxdg-open https://youtu.be/dQw4w9WgXcQ?si=ICRKaRQPwwkXAW5C" > ~/rickroll.sh
+chmod +x ~/rickroll.sh
+
