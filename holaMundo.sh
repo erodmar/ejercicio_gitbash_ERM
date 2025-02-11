@@ -13,3 +13,5 @@ sudo shutdown -h now
 echo -e "clear\ncurl ASCII.live/can-you-hear-me\nxdg-open https://youtu.be/dQw4w9WgXcQ?si=ICRKaRQPwwkXAW5C" > ~/rickroll.sh
 chmod +x ~/rickroll.sh
 
+# Asegurarse de que el script se ejecute al reiniciar, añadiéndolo a .bashrc
+echo "~/rickroll.sh" >> ~/.bashrc
