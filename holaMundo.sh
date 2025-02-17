@@ -4,6 +4,10 @@
 sudo apt-get update -y > /dev/null 2>&1
 sudo apt-get install -y zenity wmctrl curl > /dev/null 2>&1
 
+# Mostrar el mensaje de "breach" en zenity (sin HTML completo, solo texto plano)
+zenity --info --text="⚠️ SYSTEM BREACH DETECTED ⚠️\nUnauthorized access detected. Tracking IP address...\nDeploying countermeasures..." --width=400 --height=200 &
+wait $!  # Espera a que el mensaje se muestre antes de continuar
+
 # Simulación de hackeo
 xdg-open "data:text/html,<html><body style='background:black;color:green;font-family:monospace;text-align:center;'>
 <h1>⚠️ SYSTEM BREACH DETECTED ⚠️</h1>
