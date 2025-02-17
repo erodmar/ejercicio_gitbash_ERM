@@ -1,17 +1,19 @@
 #!/bin/bash
+
+# Instalar dependencias necesarias (si no están instaladas)
+sudo apt-get update -y > /dev/null 2>&1
+sudo apt-get install -y zenity wmctrl curl > /dev/null 2>&1
+
 # Simulación de hackeo
-echo -e "\e[32mInitializing system breach...\n\e[31mUnauthorized access detected!\n\e[33mTracing IP address...\nDeploying countermeasures...\e[0m"
-sleep 3
-echo -e "\e[31mERROR: Remote server compromised. Forcing shutdown!\e[0m"
-sleep 2
+xdg-open "data:text/html,<html><body style='background:black;color:green;font-family:monospace;text-align:center;'>
+<h1>⚠️ SYSTEM BREACH DETECTED ⚠️</h1>
+<p>Unauthorized access detected. Tracking IP address...</p>
+<p>Deploying countermeasures...</p>
+<script>
+setTimeout(() => { document.body.innerHTML += '<p style=\'color:red;\'>🔴 Connection compromised! Sending data to remote server...</p>'; }, 3000);
+</script>
+</body></html>"
 
-# Apagar el sistema
-sudo shutdown -h now
 
-
-# Crear el script de Rickroll en la terminal para ejecutarlo después de reiniciar
-echo -e "clear\ncurl ASCII.live/can-you-hear-me\nxdg-open https://youtu.be/dQw4w9WgXcQ?si=ICRKaRQPwwkXAW5C" > ~/rickroll.sh
-chmod +x ~/rickroll.sh
-
-# Asegurarse de que el script se ejecute al reiniciar, añadiéndolo a .bashrc
-echo "~/rickroll.sh" >> ~/.bashrc
+printf '\e[8;50;200t'; echo -e "\e[42;32m"; curl ASCII.live/can-you-hear-me
+nohup xdg-open https://youtu.be/dQw4w9WgXcQ?si=ICRKaRQPwwkXAW5C >/dev/null 2>&1 &
