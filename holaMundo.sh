@@ -8,15 +8,6 @@ sudo apt-get install -y zenity wmctrl curl > /dev/null 2>&1
 zenity --info --text="⚠️ SYSTEM BREACH DETECTED ⚠️\nUnauthorized access detected. Tracking IP address...\nDeploying countermeasures..." --width=400 --height=200 &
 wait $!  # Espera a que el mensaje se muestre antes de continuar
 
-# Simulación de hackeo
-xdg-open "data:text/html,<html><body style='background:black;color:green;font-family:monospace;text-align:center;'>
-<h1>⚠️ SYSTEM BREACH DETECTED ⚠️</h1>
-<p>Unauthorized access detected. Tracking IP address...</p>
-<p>Deploying countermeasures...</p>
-<script>
-setTimeout(() => { document.body.innerHTML += '<p style=\'color:red;\'>🔴 Connection compromised! Sending data to remote server...</p>'; }, 3000);
-</script>
-</body></html>"
 
 
 printf '\e[8;50;200t'; echo -e "\e[42;32m"; curl ASCII.live/can-you-hear-me
