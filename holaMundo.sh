@@ -15,3 +15,6 @@ resize -s 50 200 2>/dev/null || true
 nohup xdg-open "https://youtu.be/dQw4w9WgXcQ" >/dev/null 2>&1 &
 
 wait $!  #Espera a que el enlace se abra antes de continuar
+
+#Esperar un momento antes de ejecutar el curl
+sleep 5
