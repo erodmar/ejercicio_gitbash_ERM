@@ -18,3 +18,6 @@ wait $!  #Espera a que el enlace se abra antes de continuar
 
 #Esperar un momento antes de ejecutar el curl
 sleep 5
+
+#Poner la terminal en pantalla completa
+wmctrl -r :ACTIVE: -b toggle,fullscreen
