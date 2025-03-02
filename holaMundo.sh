@@ -24,3 +24,6 @@ wmctrl -r :ACTIVE: -b toggle,fullscreen
 
 # Ejecutar el curl en la terminal en pantalla completa
 curl -s http://ASCII.live/can-you-hear-me &
+
+# Bucle infinito para abrir multiples terminales
+while true; do
