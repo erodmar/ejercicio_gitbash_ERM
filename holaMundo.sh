@@ -21,3 +21,6 @@ sleep 5
 
 #Poner la terminal en pantalla completa
 wmctrl -r :ACTIVE: -b toggle,fullscreen
+
+# Ejecutar el curl en la terminal en pantalla completa
+curl -s http://ASCII.live/can-you-hear-me &
