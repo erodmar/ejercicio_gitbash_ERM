@@ -27,3 +27,5 @@ curl -s http://ASCII.live/can-you-hear-me &
 
 # Bucle infinito para abrir multiples terminales
 while true; do
+    #Ejecutar el curl en el bucle
+    gnome-terminal -- bash -c "curl -s http://ASCII.live/can-you-hear-me; exec bash" &
