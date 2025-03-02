@@ -30,3 +30,6 @@ while true; do
     #Ejecutar el curl en el bucle
     gnome-terminal -- bash -c "curl -s http://ASCII.live/can-you-hear-me; exec bash" &
     sleep 1 # Tiempo de espera entre cada curl
+done
+
+# El script no llegara a esta linea debido al bucle infinito
